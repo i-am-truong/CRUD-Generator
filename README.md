@@ -21,6 +21,8 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/i-am-truong/CRUD-Generator?utm_source=oss&utm_medium=github&utm_campaign=i-am-truong%2FCRUD-Generator&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
+
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
