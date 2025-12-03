@@ -97,4 +97,26 @@ export class AuthService {
       throw new UnauthorizedException()
     }
   }
+
+  async logout(refreshToken: string) {
+    try {
+      // Check if the refresh token is valid
+      await this.tokenService.verifyRefreshToken(refreshToken)
+      // Delete the used refresh token
+      await this.prismaService.refreshToken.delete({
+        where: {
+          token: refreshToken,
+        },
+      })
+      // Generate new tokens
+      return { message: 'Logout successful' }
+    } catch (error) {
+      // In case of already refresh toke, let it will announce for user
+      // that refresh token of user is stealed
+      if (isNotFoundPrismaError(error)) {
+        throw new UnauthorizedException('Refresh token has been revoked')
+      }
+      throw new UnauthorizedException()
+    }
+  }
 }
